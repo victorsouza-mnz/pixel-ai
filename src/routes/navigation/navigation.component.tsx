@@ -1,15 +1,15 @@
 import { Outlet, Link } from "react-router-dom";
-import { ReactComponent as PixelLogo } from "../../assets/logo.svg";
-import "./navigation.styles.scss";
+import Logo from "../../assets/logo.svg";
 import { useUserContext } from "../../providers/user.context";
+import "./navigation.styles.scss";
 
 const Navigation = () => {
   const { user } = useUserContext();
   return (
     <>
       <div className="navigation">
-        <Link className="logo-container" to="/">
-          <PixelLogo className="logo" />
+        <Link className="logo-container logo" to="/">
+          <Logo />
         </Link>
         <div className="nav-links-container">
           <Link className="nav-link" to="/catalog">
