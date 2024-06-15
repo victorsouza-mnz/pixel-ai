@@ -15,6 +15,9 @@ const Navigation = () => {
           <Link className="nav-link" to="/catalog">
             CATALOG
           </Link>
+          <Link className="nav-link" to="/editor">
+            EDITOR
+          </Link>
           {user ? (
             <Link className="nav-link" to="/">
               SIGN OUT
