@@ -1,20 +1,20 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-import FormInput from "../form-input/form-input.component";
-import Button from "../button/button.component";
+import FormInput from '../form-input/form-input.component';
+import Button from '../button/button.component';
 
 import {
   createAuthUserWithEmailAndPassword,
   createUserDocumentFromAuth,
-} from "../../utils/firebase/firebase.utils";
+} from '../../utils/firebase/firebase.utils';
 
-import "./sign-up-form.styles.scss";
+import './sign-up-form.styles.scss';
 
 const defaultFormFields = {
-  displayName: "",
-  email: "",
-  password: "",
-  confirmPassword: "",
+  displayName: '',
+  email: '',
+  password: '',
+  confirmPassword: '',
 };
 
 const SignUpForm = () => {
@@ -29,7 +29,7 @@ const SignUpForm = () => {
     event.preventDefault();
     const { password, email, confirmPassword, displayName } = formFields;
     if (confirmPassword !== password) {
-      alert("Passwords dont match");
+      alert('Passwords dont match');
       return;
     }
 
@@ -46,8 +46,8 @@ const SignUpForm = () => {
       resetFormFields();
     } catch (e) {
       console.log(e.code);
-      if (e.code === "auth/email-already-in-use") {
-        alert("cannot create account, email alread in use");
+      if (e.code === 'auth/email-already-in-use') {
+        alert('cannot create account, email alread in use');
       } else {
         console.log(e.message);
       }

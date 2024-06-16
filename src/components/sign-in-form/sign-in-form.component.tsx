@@ -1,18 +1,18 @@
-import { useCallback, useState } from "react";
+import { useCallback, useState } from 'react';
 import {
   SignInWithGooglePopup,
   createUserDocumentFromAuth,
   signInAuthUserWithEmailAndPassword,
-} from "../../utils/firebase/firebase.utils";
-import FormInput from "../form-input/form-input.component";
-import Button from "../button/button.component";
+} from '../../utils/firebase/firebase.utils';
+import FormInput from '../form-input/form-input.component';
+import Button from '../button/button.component';
 
-import "./sign-in-form.styles.scss";
-import { useUserContext } from "../../providers/user.context";
+import './sign-in-form.styles.scss';
+import { useUserContext } from '../../providers/user.context';
 
 const DEFAULT_FORM_FIELDS = {
-  email: "",
-  password: "",
+  email: '',
+  password: '',
 };
 
 const SignInForm = () => {
@@ -50,8 +50,8 @@ const SignInForm = () => {
       setUser(user);
       resetFormFields();
     } catch (e) {
-      if (e.code === "auth/invalid-credential") {
-        alert("Invalid email or password");
+      if (e.code === 'auth/invalid-credential') {
+        alert('Invalid email or password');
       }
       alert(e.code);
     }
@@ -63,7 +63,7 @@ const SignInForm = () => {
       <span>Sign in with yout email and password</span>
       <form onSubmit={(event) => handleSubmit(event)}>
         <FormInput
-          label={"Email"}
+          label={'Email'}
           type="email"
           name="email"
           onChange={handleFormChange}
@@ -72,7 +72,7 @@ const SignInForm = () => {
         />
 
         <FormInput
-          label={"Password"}
+          label={'Password'}
           type="password"
           name="password"
           onChange={handleFormChange}

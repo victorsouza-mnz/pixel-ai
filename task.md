@@ -1,1 +1,1 @@
-TODO: implement REST API backend as Azure functions 
+TODO: implement REST API backend as Azure functions

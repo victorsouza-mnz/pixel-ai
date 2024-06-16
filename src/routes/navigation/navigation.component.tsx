@@ -1,7 +1,7 @@
-import { Outlet, Link } from "react-router-dom";
-import Logo from "../../assets/logo.svg";
-import { useUserContext } from "../../providers/user.context";
-import "./navigation.styles.scss";
+import { Outlet, Link } from 'react-router-dom';
+import Logo from '../../assets/logo.svg';
+import { useUserContext } from '../../providers/user.context';
+import './navigation.styles.scss';
 
 const Navigation = () => {
   const { user } = useUserContext();

@@ -1,10 +1,10 @@
 /// <reference types="vite-plugin-svgr/client" />
-import Home from "./routes/home/home.component";
-import { Routes, Route } from "react-router-dom";
-import Navigation from "./routes/navigation/navigation.component";
-import Authentication from "./routes/authentication/authentication.component";
-import "./App.css";
-import EditorPage from "./modules/editor/pages/EditorPage";
+import Home from './routes/home/home.component';
+import { Routes, Route } from 'react-router-dom';
+import Navigation from './routes/navigation/navigation.component';
+import Authentication from './routes/authentication/authentication.component';
+import './App.css';
+import EditorPage from './modules/editor/pages/EditorPage';
 
 function App() {
   return (

@@ -6,5 +6,7 @@ declare module '*.svg' {
   export default content;
 
   // Declaração adicional para permitir className
-  export const ReactComponent: React.FunctionComponent<React.SVGProps<SVGSVGElement> & { className?: string }>;
+  export const ReactComponent: React.FunctionComponent<
+    React.SVGProps<SVGSVGElement> & { className?: string }
+  >;
 }

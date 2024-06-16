@@ -1,5 +1,5 @@
 export interface CategoryItemProps {
-  category: Category
+  category: Category;
 }
 
 export interface Category {

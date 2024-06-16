@@ -4,7 +4,7 @@ import {
   useCallback,
   useContext,
   useState,
-} from "react";
+} from 'react';
 
 interface UserContextType {
   //TODO tipar o user
@@ -33,7 +33,7 @@ function UserProvider({ children }: { children: ReactNode }) {
 export const useUserContext = () => {
   const context = useContext(UserContext);
   if (!context) {
-    throw new Error("useUserContext needs to be user within a UserProvide");
+    throw new Error('useUserContext needs to be user within a UserProvide');
   }
 
   return context;

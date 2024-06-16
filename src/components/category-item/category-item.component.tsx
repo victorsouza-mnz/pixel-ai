@@ -1,6 +1,6 @@
-import React from "react";
-import "./category-item.styles.scss";
-import { CategoryItemProps } from "@/types/categories";
+import React from 'react';
+import './category-item.styles.scss';
+import { CategoryItemProps } from '@/types/categories';
 
 const CategoryItem = ({ category }: CategoryItemProps) => {
   const { imageUrl, title } = category;

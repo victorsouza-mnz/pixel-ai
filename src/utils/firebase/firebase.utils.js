@@ -1,27 +1,27 @@
-import { initializeApp } from "firebase/app";
+import { initializeApp } from 'firebase/app';
 import {
   getAuth,
   signInWithPopup,
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-} from "firebase/auth";
+} from 'firebase/auth';
 
-import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
+import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDc184ivxTJ3AAsxrtVZHO76Fx4dgi67S0",
-  authDomain: "piquicel.firebaseapp.com",
-  projectId: "piquicel",
-  storageBucket: "piquicel.appspot.com",
-  messagingSenderId: "516874186056",
-  appId: "1:516874186056:web:2bcf8245ec97e4d1d0177d",
+  apiKey: 'AIzaSyDc184ivxTJ3AAsxrtVZHO76Fx4dgi67S0',
+  authDomain: 'piquicel.firebaseapp.com',
+  projectId: 'piquicel',
+  storageBucket: 'piquicel.appspot.com',
+  messagingSenderId: '516874186056',
+  appId: '1:516874186056:web:2bcf8245ec97e4d1d0177d',
 };
 
 const firebaseApp = initializeApp(firebaseConfig);
 
 const provider = new GoogleAuthProvider({
-  prompt: "select_account",
+  prompt: 'select_account',
 });
 
 export const auth = getAuth();
@@ -34,7 +34,7 @@ export const createUserDocumentFromAuth = async (
   userFromAuth,
   additionaInformation = {}
 ) => {
-  const userDocRef = doc(db, "users", userFromAuth.uid);
+  const userDocRef = doc(db, 'users', userFromAuth.uid);
 
   const userSnapShot = await getDoc(userDocRef);
 
@@ -49,7 +49,7 @@ export const createUserDocumentFromAuth = async (
         ...additionaInformation,
       });
     } catch (error) {
-      console.log("error creating the user", error.message);
+      console.log('error creating the user', error.message);
     }
   }
 
