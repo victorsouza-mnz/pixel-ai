@@ -1,11 +1,9 @@
-import React from 'react';
-import CategoryItem from '../../modules/home/components/CategoryItem';
-import { Category } from '../../types/categories';
-import './directory.styles.scss';
+import CategoryItem from './CategoryItem';
+import { Category } from '../../../types/categories';
 
 const Directory = ({ categories }: { categories: Category[] }) => {
   return (
-    <div className="directory-container">
+    <div className="flex flex-wrap justify-between w-full">
       {categories.map((category: Category) => (
         <CategoryItem key={category.id} category={category} />
       ))}
