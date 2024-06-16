@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import FormInput from '../form-input/form-input.component';
+import FormInput from '../../modules/shared/components/FormInput';
 import Button from '../../modules/shared/components/Button';
 
 import {

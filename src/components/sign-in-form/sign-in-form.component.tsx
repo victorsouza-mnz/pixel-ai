@@ -4,7 +4,7 @@ import {
   createUserDocumentFromAuth,
   signInAuthUserWithEmailAndPassword,
 } from '../../utils/firebase/firebase.utils';
-import FormInput from '../form-input/form-input.component';
+import FormInput from '../../modules/shared/components/FormInput';
 import Button from '../../modules/shared/components/Button';
 
 import './sign-in-form.styles.scss';
