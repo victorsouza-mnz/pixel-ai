@@ -5,7 +5,7 @@ import {
   signInAuthUserWithEmailAndPassword,
 } from '../../utils/firebase/firebase.utils';
 import FormInput from '../form-input/form-input.component';
-import Button from '../button/button.component';
+import Button from '../../modules/shared/components/Button';
 
 import './sign-in-form.styles.scss';
 import { useUserContext } from '../../providers/user.context';

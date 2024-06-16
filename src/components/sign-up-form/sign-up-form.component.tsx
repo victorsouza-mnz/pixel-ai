@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import FormInput from '../form-input/form-input.component';
-import Button from '../button/button.component';
+import Button from '../../modules/shared/components/Button';
 
 import {
   createAuthUserWithEmailAndPassword,
@@ -101,7 +101,9 @@ const SignUpForm = () => {
           value={confirmPassword}
           required
         />
-        <Button type="submit">SIGN UP</Button>
+        <Button buttonType="inverted" type="submit">
+          SIGN UP
+        </Button>
       </form>
     </div>
   );
